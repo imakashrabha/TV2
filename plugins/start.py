@@ -60,7 +60,7 @@ async def start_command(client: Client, message: Message):
         if "verify_" in message.text:
             _, token = message.text.split("_", 1)
             if verify_status['verify_token'] != token:
-                return await message.reply("Your token is invalid or Expired. Try again by clicking /start")
+                return await message.reply("Your token is invalid or Expired.\n Try again by clicking /start")
             await update_verify_status(id, is_verified=True, verified_time=time.time())
             if verify_status["link"] == "":
                 reply_markup = None
@@ -138,8 +138,8 @@ async def start_command(client: Client, message: Message):
 
         elif verify_status['is_verified']:
             reply_markup = InlineKeyboardMarkup(
-                [[InlineKeyboardButton("⚡️ ᴀʙᴏᴜᴛ", callback_data = "about"),
-                  InlineKeyboardButton('🍁 sᴇʀɪᴇsғʟɪx', url='https://t.me/thealllink')]]
+                [[InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data = "about"),
+                  InlineKeyboardButton('ᴄᴏᴍᴍᴜɴɪᴛʏ', url='https://t.me/+yft5ysRDW4BiOTc9')]]
             )
             await message.reply_text(
                 text=START_MSG.format(
@@ -163,10 +163,10 @@ async def start_command(client: Client, message: Message):
                 await update_verify_status(id, verify_token=token, link="")
                 link = await get_shortlink(SHORTLINK_URL, SHORTLINK_API,f'https://telegram.dog/{client.username}?start=verify_{token}')
                 btn = [
-                    [InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ", url=link)],
-                    [InlineKeyboardButton('ᴛᴜᴛᴏʀɪᴀʟ •', url=TUT_VID)]
+                    [InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ", url=link),
+                    InlineKeyboardButton('ᴛᴜᴛᴏʀɪᴀʟ •', url=TUT_VID)]
                 ]
-                await message.reply(f"Your Ads token is expired, refresh your token and try again.\n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. If you pass 1 ad, you can use the bot for 24 Hour after passing the ad.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
+                await message.reply(f"Hᴇʏ ʙʀᴏ/sɪs\n\n⌯ ᴛᴏᴋᴇɴ ᴛɪᴍᴇᴏᴜᴛ : 24 ʜᴏᴜʀ\n\n⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴏᴘᴇɴ ʟɪɴᴋ ʙᴜᴛᴛᴏɴ. ɪғ ʏᴏᴜʀ ᴘᴀss 1 ᴀᴅ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ ғᴏʀ 24 ʜᴏᴜʀ ᴀғᴛᴇʀ ᴘᴀssɪɴɢ ᴛʜᴇ ᴀᴅ.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
 
 
 
@@ -195,7 +195,7 @@ async def not_joined(client: Client, message: Message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = '• ʀᴇʟᴏᴀᴅ •',
+                    text = '• ᴛʀʏ ᴀɢᴀɪɴ •',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]

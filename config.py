@@ -3,10 +3,10 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7715011880:AAELLohlQmZJRqEtDC7NO409Zrp-VQskwtY")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7869629794:AAHETg2PO2jruM9rxkXZbvh-AwyoM-DIgOI")
 APP_ID = int(os.environ.get("APP_ID", "27705761"))
 API_HASH = os.environ.get("API_HASH", "822cb334ca4527a134aae97f9fe44fd6")
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002382246398"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002397556354"))
 
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "6987158459"))
@@ -33,7 +33,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}, 𝖳𝗁𝖺𝗇𝗄𝗌 𝖿𝗈𝗋 𝗎𝗌𝗂𝗇𝗀 𝗆𝖾. 𝖫𝗈𝗏𝖾 𝖬𝗈𝗏𝗂𝖾𝗌 & 𝖲𝖾𝗋𝗂𝖾𝗌? 𝖨'𝗆 𝗆𝖺𝖽𝖾 𝗍𝗈 𝗁𝖾𝗅𝗉 𝗐𝖺𝗍𝖼𝗁 𝗐𝗁𝖺𝗍 𝗒𝗈𝗎'𝗋𝖾 𝗅𝗈𝗈𝗄𝗂𝗇𝗀 𝖿𝗈𝗋.\n𝖢𝗁𝖾𝖼𝗄 𝗈𝗎𝗍 𝗈𝗎𝗋 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝖻𝖾𝗅𝗈𝗐 𝖿𝗈𝗋 𝗆𝗈𝗋𝖾!👇.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "6987158459 6165669080 1473392446").split()):
+    for x in (os.environ.get("ADMINS", "6987158459").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")

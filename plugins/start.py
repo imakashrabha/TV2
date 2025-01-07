@@ -60,11 +60,11 @@ async def start_command(client: Client, message: Message):
         if "verify_" in message.text:
             _, token = message.text.split("_", 1)
             if verify_status['verify_token'] != token:
-                return await message.reply("Your token is invalid or Expired.\n Try again by clicking /start")
+                return await message.reply("<b>Your token is invalid or Expired.\n Try again by clicking /start </b>")
             await update_verify_status(id, is_verified=True, verified_time=time.time())
             if verify_status["link"] == "":
                 reply_markup = None
-            await message.reply(f"Your token successfully verified and valid for: 24 Hour", reply_markup=reply_markup, protect_content=False, quote=True)
+            await message.reply(f"Your token successfully verified and valid for: 30min", reply_markup=reply_markup, protect_content=False, quote=True)
 
         elif len(message.text) > 7 and verify_status['is_verified']:
             try:
@@ -126,8 +126,8 @@ async def start_command(client: Client, message: Message):
                 except:
                     pass
 
-            SD = await message.reply_text("𝖥𝗂𝗅𝖾𝗌 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝖠𝖿𝗍𝖾𝗋 5 𝗆𝗂𝗇𝗎𝗍𝖾𝗌. 𝖲𝖺𝗏𝖾 𝗍𝗁𝖾𝗆 𝗍𝗈 𝗍𝗁𝖾 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾 𝗇𝗈𝗐!")
-            await asyncio.sleep(300)
+            SD = await message.reply_text("<b>𝖳𝗁𝗂𝗌 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 5 𝗆𝗂𝗇𝗎𝗍𝖾𝗌. 𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗍 𝗍𝗈 𝗒𝗈𝗎𝗋 𝗌𝖺𝗏𝖾𝖽 𝗆𝖺𝗌𝗌𝖺𝗀𝖾𝗌 𝖻𝖾𝖿𝗈𝗋𝖾 𝖽𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝗀.</b>")
+            await asyncio.sleep(1800)
 
             for snt_msg in snt_msgs:
                 try:
@@ -166,7 +166,7 @@ async def start_command(client: Client, message: Message):
                     [InlineKeyboardButton("• ᴏᴘᴇɴ ʟɪɴᴋ", url=link),
                     InlineKeyboardButton('ᴛᴜᴛᴏʀɪᴀʟ •', url=TUT_VID)]
                 ]
-                await message.reply(f"Hᴇʏ ʙʀᴏ/sɪs\n\n⌯ ᴛᴏᴋᴇɴ ᴛɪᴍᴇᴏᴜᴛ : 24 ʜᴏᴜʀ\n\n⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴏᴘᴇɴ ʟɪɴᴋ ʙᴜᴛᴛᴏɴ. ɪғ ʏᴏᴜʀ ᴘᴀss 1 ᴀᴅ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ ғᴏʀ 24 ʜᴏᴜʀ ᴀғᴛᴇʀ ᴘᴀssɪɴɢ ᴛʜᴇ ᴀᴅ.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
+                await message.reply(f"Hᴇʏ ʙʀᴏ/sɪs\n\n⌯ ᴛᴏᴋᴇɴ ᴛɪᴍᴇᴏᴜᴛ : 30 ᴍɪɴ\n\n⌯ ʏᴏᴜʀ ʟɪɴᴋ ɪꜱ ʀᴇᴀᴅʏ, ᴋɪɴᴅʟʏ ᴄʟɪᴄᴋ ᴏɴ ᴏᴘᴇɴ ʟɪɴᴋ ʙᴜᴛᴛᴏɴ. ɪғ ʏᴏᴜʀ ᴘᴀss 1 ᴀᴅ, ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ ғᴏʀ 30 ᴍɪɴ ᴀғᴛᴇʀ ᴘᴀssɪɴɢ ᴛʜᴇ ᴀᴅ.", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
 
 
 

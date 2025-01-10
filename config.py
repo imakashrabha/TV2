@@ -6,7 +6,7 @@ from logging.handlers import RotatingFileHandler
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7869629794:AAHETg2PO2jruM9rxkXZbvh-AwyoM-DIgOI")
 APP_ID = int(os.environ.get("APP_ID", "27705761"))
 API_HASH = os.environ.get("API_HASH", "822cb334ca4527a134aae97f9fe44fd6")
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002397556354"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002467366697"))
 
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "6987158459"))
@@ -18,14 +18,14 @@ DB_NAME = os.environ.get("DATABASE_NAME", "codeflix_bots")
 
 #Shortner (token system) 
 
-SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "inshorturl.com")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "2f6906acdb3b908fdf074f37a47a633a0771343a")
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "tryshort.in")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "08f911e9342ebb46e103cb53f304b349d9d68ea6")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 1800)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
-TUT_VID = os.environ.get("TUT_VID", "https://t.me/HowTooOpenLink/7") 
+TUT_VID = os.environ.get("TUT_VID", "https://t.me/HowTooOpenLink/10") 
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002201654960"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002464293896"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -42,10 +42,10 @@ except ValueError:
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "ʜᴇʟʟᴏ {first}\n\n<b>ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ʀᴇʟᴏᴀᴅ button ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ʀᴇǫᴜᴇꜱᴛᴇᴅ ꜰɪʟᴇ.</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b><a href='https://t.me/+yft5ysRDW4BiOTc9'>𝖢𝖮𝖬𝖬𝖴𝖭𝖨𝖳𝖸 💀</a></b>")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>\n• 𝖡𝗒 <a href='https://t.me/+yft5ysRDW4BiOTc9'>𝖢𝖮𝖬𝖬𝖴𝖭𝖨𝖳𝖸 💀</a></b>")
 
 #set True if you want to prevent users from forwarding files from bot
-PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" else False
+PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
 
 #Set true if you want Disable your Channel Posts Share button
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
